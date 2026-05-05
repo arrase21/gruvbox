@@ -552,19 +552,20 @@ call s:HL('Folded', s:gray, s:bg1, s:italic)
 " Column where folds are displayed
 call s:HL('FoldColumn', s:gray, s:bg1)
 
+"call s:HL('LspReferenceText',  s:none, s:bg4)
+"call s:HL('LspReferenceRead',  s:none, s:bg2)
+"call s:HL('LspReferenceWrite', s:none, s:green)
 
 call s:HL('MiniTablineCurrent', s:green, s:bg3, s:bold)
 call s:HL('MiniTablineModifiedCurrent', s:green, s:fg1, s:bold)
-"- `MiniTablineVisible` - buffer is visible (displayed in some window).
-"- `MiniTablineHidden` - buffer is hidden (not displayed).
-"- `MiniTablineModifiedCurrent` - buffer is modified and current.
-"- `MiniTablineModifiedVisible` - buffer is modified and visible.
-"- `MiniTablineModifiedHidden` - buffer is modified and hidden.
-"- `MiniTablineFill` - unused right space of tabline.
-"- `MiniTablineTabpagesection` - section with tabpage information.
-"- `MiniTablineTrunc` - truncation symbols indicating more left/right tabs.
 
-
+" Mini Statusline modes
+call s:HL('MiniStatuslineModeNormal',  s:bg0, s:green, s:bold)
+call s:HL('MiniStatuslineModeInsert',  s:bg0, s:blue,   s:bold)
+call s:HL('MiniStatuslineModeVisual',  s:bg0, s:orange, s:bold)
+call s:HL('MiniStatuslineModeReplace', s:bg0, s:red,    s:bold)
+call s:HL('MiniStatuslineModeCommand', s:bg0, s:aqua,   s:bold)
+call s:HL('MiniStatuslineModeOther',   s:bg0, s:purple, s:bold)
 
 " MiniClue
 call s:HL('MiniClueBorder',              s:fg2,    s:none)

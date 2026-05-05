@@ -512,8 +512,8 @@ call s:HL('IncSearch', s:hls_cursor, s:bg0, s:inverse)
 
 call s:HL('Underlined', s:blue, s:none, s:underline)
 
-call s:HL('StatusLine',   s:bg2, s:fg1, s:inverse)
-call s:HL('StatusLineNC', s:bg1, s:fg4, s:inverse)
+call s:HL('StatusLine',   s:none, s:bg1, )
+call s:HL('StatusLineNC', s:none, s:fg4, s:inverse)
 
 " The column separating vertically split windows
 call s:HL('VertSplit', s:bg3, s:vert_split)
@@ -528,7 +528,7 @@ hi! link Directory GruvboxGreenBold
 hi! link Title GruvboxGreenBold
 
 " Error messages on the command line
-call s:HL('ErrorMsg',   s:bg0, s:red, s:bold)
+call s:HL('ErrorMsg', s:red, s:none, s:bold)
 " More prompt: -- More --
 hi! link MoreMsg GruvboxYellowBold
 " Current mode message: -- INSERT --
@@ -545,12 +545,68 @@ hi! link WarningMsg GruvboxRedBold
 call s:HL('LineNr', s:bg4, s:number_column)
 
 " Column where signs are displayed
-call s:HL('SignColumn', s:none, s:sign_column)
+call s:HL('SignColumn', s:none, s:none)
 
 " Line used for closed folds
 call s:HL('Folded', s:gray, s:bg1, s:italic)
 " Column where folds are displayed
 call s:HL('FoldColumn', s:gray, s:bg1)
+
+
+call s:HL('MiniTablineCurrent', s:green, s:bg3, s:bold)
+call s:HL('MiniTablineModifiedCurrent', s:green, s:fg1, s:bold)
+"- `MiniTablineVisible` - buffer is visible (displayed in some window).
+"- `MiniTablineHidden` - buffer is hidden (not displayed).
+"- `MiniTablineModifiedCurrent` - buffer is modified and current.
+"- `MiniTablineModifiedVisible` - buffer is modified and visible.
+"- `MiniTablineModifiedHidden` - buffer is modified and hidden.
+"- `MiniTablineFill` - unused right space of tabline.
+"- `MiniTablineTabpagesection` - section with tabpage information.
+"- `MiniTablineTrunc` - truncation symbols indicating more left/right tabs.
+
+
+
+" MiniClue
+call s:HL('MiniClueBorder',              s:fg2,    s:none)
+call s:HL('MiniClueDescGroup',           s:yellow, s:none, s:bold)
+call s:HL('MiniClueDescSingle',          s:fg1,    s:none)
+call s:HL('MiniClueNextKey',             s:green,  s:none, s:bold)
+call s:HL('MiniClueNextKeyWithPostkeys', s:aqua,   s:none, s:bold)
+call s:HL('MiniClueSeparator',           s:gray,   s:none)
+call s:HL('MiniClueTitle',               s:blue,   s:none, s:bold)
+" Forzar transparencia en la ventana flotante
+call s:HL('NormalFloat', s:fg1, s:none)
+call s:HL('FloatBorder', s:fg2, s:none)
+
+" Diagnostics (LSP)
+call s:HL('DiagnosticError',           s:red,    s:none)
+call s:HL('DiagnosticWarn',            s:yellow, s:none)
+call s:HL('DiagnosticInfo',            s:blue,   s:none)
+call s:HL('DiagnosticHint',            s:aqua,   s:none)
+call s:HL('DiagnosticOk',              s:green,  s:none)
+" Underlines en el código
+call s:HL('DiagnosticLineError', s:none, s:bg1)  " solo fondo, sin foreground
+call s:HL('DiagnosticUnderlineError',  s:none,    s:none, s:undercurl)
+call s:HL('DiagnosticUnderlineWarn',   s:none,   s:none, s:undercurl)
+call s:HL('DiagnosticUnderlineInfo',   s:none,   s:none, s:undercurl)
+call s:HL('DiagnosticUnderlineHint',   s:none,   s:none, s:undercurl)
+" Floating windows de diagnóstico
+call s:HL('DiagnosticFloatingError',   s:red,    s:none)
+call s:HL('DiagnosticFloatingWarn',    s:yellow, s:none)
+call s:HL('DiagnosticFloatingInfo',    s:blue,   s:none)
+call s:HL('DiagnosticFloatingHint',    s:aqua,   s:none)
+
+" Signos en el gutter
+call s:HL('DiagnosticSignError',       s:red,    s:none)
+call s:HL('DiagnosticSignWarn',        s:yellow, s:none)
+call s:HL('DiagnosticSignInfo',        s:blue,   s:none)
+call s:HL('DiagnosticSignHint',        s:aqua,   s:none)
+
+call s:HL('DiagnosticVirtualTextError', s:bg1,    s:red)
+call s:HL('DiagnosticVirtualTextWarn',  s:yellow, s:bg1)
+call s:HL('DiagnosticVirtualTextInfo',  s:blue,   s:bg1)
+call s:HL('DiagnosticVirtualTextHint',  s:aqua,   s:bg1)
+call s:HL('LineNr', s:none)
 
 " }}}
 " Cursor: {{{
@@ -651,15 +707,13 @@ endif
 " }}}
 " Diffs: {{{
 
-call s:HL('DiffDelete', s:red, s:bg0, s:inverse)
-call s:HL('DiffAdd',    s:green, s:bg0, s:inverse)
-"call s:HL('DiffChange', s:bg0, s:blue)
-"call s:HL('DiffText',   s:bg0, s:yellow)
-
-" Alternative setting
-call s:HL('DiffChange', s:aqua, s:bg0, s:inverse)
-call s:HL('DiffText',   s:yellow, s:bg0, s:inverse)
-
+call s:HL('MiniDiffSignAdd',    s:green,  s:none)
+call s:HL('MiniDiffSignChange', s:aqua,   s:none)
+call s:HL('MiniDiffSignDelete', s:red,    s:none)
+call s:HL('MiniDiffOverAdd',    s:none,   s:bg1)
+call s:HL('MiniDiffOverChange', s:none,   s:bg2)
+call s:HL('MiniDiffOverDelete', s:none,   s:bg1)
+call s:HL('MiniDiffOverContext',s:none,   s:bg1)
 " }}}
 " Spelling: {{{
 
@@ -1416,3 +1470,4 @@ endfunction
 " }}}
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
+

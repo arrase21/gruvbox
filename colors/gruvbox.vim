@@ -522,7 +522,8 @@ call s:HL('VertSplit', s:bg3, s:vert_split)
 call s:HL('WildMenu', s:blue, s:bg2, s:bold)
 
 " Directory names, special names in listing
-hi! link Directory GruvboxGreenBold
+"hi! link Directory GruvboxGreenBold
+hi! Directory guifg=#b8bb26 ctermfg=142 gui=bold cterm=bold
 
 " Titles for output from :set all, :autocmd, etc.
 hi! link Title GruvboxGreenBold

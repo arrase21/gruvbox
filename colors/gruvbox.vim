@@ -970,6 +970,57 @@ call s:HL('CocInfoHighlight', s:none, s:none, s:undercurl, s:yellow)
 call s:HL('CocHintHighlight', s:none, s:none, s:undercurl, s:blue)
 
 " }}}
+" Blink Cmp: {{{
+
+hi! link BlinkCmpLabel             GruvboxFg0
+hi! link BlinkCmpLabelDeprecated   GruvboxFg1
+hi! link BlinkCmpLabelMatch        GruvboxBlueBold
+hi! link BlinkCmpLabelDetail       GruvboxGray
+hi! link BlinkCmpLabelDescription  GruvboxGray
+
+hi! link BlinkCmpKindText          GruvboxOrange
+hi! link BlinkCmpKindVariable      GruvboxOrange
+hi! link BlinkCmpKindMethod        GruvboxBlue
+hi! link BlinkCmpKindFunction      GruvboxBlue
+hi! link BlinkCmpKindConstructor   GruvboxYellow
+hi! link BlinkCmpKindUnit          GruvboxBlue
+hi! link BlinkCmpKindField         GruvboxBlue
+hi! link BlinkCmpKindClass         GruvboxYellow
+hi! link BlinkCmpKindInterface     GruvboxYellow
+hi! link BlinkCmpKindModule        GruvboxBlue
+hi! link BlinkCmpKindProperty      GruvboxBlue
+hi! link BlinkCmpKindValue         GruvboxOrange
+hi! link BlinkCmpKindEnum          GruvboxYellow
+hi! link BlinkCmpKindOperator      GruvboxYellow
+hi! link BlinkCmpKindKeyword       GruvboxPurple
+hi! link BlinkCmpKindEvent         GruvboxPurple
+hi! link BlinkCmpKindReference     GruvboxPurple
+hi! link BlinkCmpKindColor         GruvboxPurple
+hi! link BlinkCmpKindSnippet       GruvboxGreen
+hi! link BlinkCmpKindFile          GruvboxBlue
+hi! link BlinkCmpKindFolder        GruvboxBlue
+hi! link BlinkCmpKindEnumMember    GruvboxAqua
+hi! link BlinkCmpKindConstant      GruvboxOrange
+hi! link BlinkCmpKindStruct        GruvboxYellow
+hi! link BlinkCmpKindTypeParameter GruvboxYellow
+
+hi! link BlinkCmpSource            GruvboxGray
+hi! link BlinkCmpGhostText         GruvboxBg4
+
+" }}}
+" Mini Icons: {{{
+
+hi! link MiniIconsAzure  GruvboxBlue
+hi! link MiniIconsBlue   GruvboxBlue
+hi! link MiniIconsCyan   GruvboxAqua
+hi! link MiniIconsGreen  GruvboxGreen
+hi! link MiniIconsGrey   GruvboxFg0
+hi! link MiniIconsOrange GruvboxOrange
+hi! link MiniIconsPurple GruvboxPurple
+hi! link MiniIconsRed    GruvboxRed
+hi! link MiniIconsYellow GruvboxYellow
+
+" }}}
 
 " Filetype specific -----------------------------------------------------------
 " Diff: {{{

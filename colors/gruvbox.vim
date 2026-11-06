@@ -475,7 +475,7 @@ endif
 
 if version >= 700
   " Screen line that the cursor is
-  call s:HL('CursorLine',   s:none, s:bg1)
+  call s:HL('CursorLine',   s:none, s:bg0)
   " Screen column that the cursor is
   hi! link CursorColumn CursorLine
 
@@ -697,7 +697,7 @@ hi! link Typedef GruvboxYellow
 
 if version >= 700
   " Popup menu: normal item
-  call s:HL('Pmenu', s:fg1, s:bg2)
+  call s:HL('Pmenu', s:fg1, s:none)
   " Popup menu: selected item
   call s:HL('PmenuSel', s:bg2, s:blue, s:bold)
   " Popup menu: scrollbar

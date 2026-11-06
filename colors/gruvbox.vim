@@ -549,9 +549,9 @@ call s:HL('LineNr', s:bg4, s:number_column)
 call s:HL('SignColumn', s:none, s:none)
 
 " Line used for closed folds
-call s:HL('Folded', s:gray, s:bg1, s:italic)
+call s:HL('Folded', s:gray, s:bg0, s:italic)
 " Column where folds are displayed
-call s:HL('FoldColumn', s:gray, s:bg1)
+call s:HL('FoldColumn', s:gray, s:bg0)
 
 "call s:HL('LspReferenceText',  s:none, s:bg4)
 "call s:HL('LspReferenceRead',  s:none, s:bg2)
